@@ -1,0 +1,11 @@
+[
+  {
+    "task": "Write a Python function that extracts the AWS region from an S3 bucket ARN (e.g., 'arn:aws:s3:::my-bucket'). Return the region or None if not found."
+  },
+  {
+    "task": "Create a JSON object that represents an AWS IAM policy allowing read-only access to a specific S3 bucket named 'my-data-bucket'."
+  },
+  {
+    "task": "Write a regex pattern that matches valid AWS access key IDs (format: starts with 'AKIA' followed by 20 uppercase alphanumeric characters)."
+  }
+]
