@@ -1,17 +1,50 @@
 [
   {
     "prompt_inputs": {
-      "height": "180 cm",
-      "weight": "72 kg",
-      "goal": "Marathon training carbohydrate-loading with high caloric intake (3500+ kcal) aligned to training schedule",
-      "restrictions": "None"
+      "height": "178 cm",
+      "weight": "68 kg",
+      "goal": "Prepare for a marathon with high-intensity long run training session scheduled for afternoon",
+      "restrictions": "No dairy products"
     },
     "solution_criteria": [
-      "Meal plan contains exactly 1 day of meals with timing synchronized to training session",
-      "Total daily calories meet or exceed 3500 kcal with carbohydrates comprising 55-65% of total intake",
-      "Plan is presented in compact format (concise descriptions, not lengthy recipes)"
+      "Meal plan spans one full day with at least 4 eating occasions",
+      "Includes carbohydrate-rich foods strategically timed before and after the long run",
+      "All foods comply with dairy-free restriction",
+      "Realistic and compact format suitable for quick reference"
     ],
     "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-    "scenario": "Testing with a professional endurance athlete (marathon runner) requiring high caloric intake and carbohydrate-loading strategy while accounting for training schedule timing"
+    "scenario": "Testing with a high-intensity endurance athlete (marathon runner) requiring high carbohydrate intake and specific timing around long training sessions"
+  },
+  {
+    "prompt_inputs": {
+      "height": "178 cm",
+      "weight": "88 kg",
+      "goal": "Build muscle and strength for weightlifting competition with training sessions at 6am, 12pm, and 5pm",
+      "restrictions": "Lactose intolerant"
+    },
+    "solution_criteria": [
+      "Meal plan covers all three training blocks with appropriate pre/post-workout nutrition",
+      "Total daily protein meets high requirements for strength athlete (minimum 1.6-2.0g per kg bodyweight)",
+      "All meals and snacks are lactose-free",
+      "Plan is concise and fits on a single page with clear meal timing"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a strength/power athlete (weightlifter) with high protein requirements and multiple training blocks throughout the day"
+  },
+  {
+    "prompt_inputs": {
+      "height": "183 cm",
+      "weight": "78 kg",
+      "goal": "Optimize energy and performance for soccer match day with two games scheduled (10:00 AM and 4:00 PM)",
+      "restrictions": "Lactose intolerant, prefers plant-based protein sources"
+    },
+    "solution_criteria": [
+      "Meal plan includes 3+ meals/snacks timed appropriately before, between, and after matches with digestive consideration",
+      "Provides adequate carbohydrates for energy availability and recovery between matches",
+      "All meals and snacks respect lactose intolerance and plant-based protein restrictions",
+      "Plan is compact and concise (suitable for 1 day format)"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a sport-specific athlete during competition day (soccer player) requiring balanced nutrition with digestive considerations and energy availability between match events"
   }
 ]
