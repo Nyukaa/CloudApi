@@ -1,0 +1,22 @@
+[
+  {
+    "output": "# One-Day Marathon Training Carbohydrate-Loading Meal Plan\n\nHere is a one-day meal plan for an athlete aiming to carbohydrate-load during marathon training with high caloric intake:\n\n* **Calorie Target:** Approximately 3,500 calories\n* **Macronutrient Breakdown:** Protein (140g), Fat (90g), Carbs (490g)\n\n## Meal Plan:\n\n* **Breakfast (7:00 AM):** Oatmeal (100g dry weight) with banana (150g), honey (30g), and whole milk (300ml). Toast with almond butter (25g).\n    * Protein: 18g, Fat: 12g, Carbs: 110g\n\n* **Mid-Morning Snack (10:00 AM):** Bagel (85g) with jam (40g) and peanut butter (20g). Orange juice (250ml).\n    * Protein: 12g, Fat: 10g, Carbs: 85g\n\n* **Lunch (1:00 PM):** Pasta with marinara sauce (200g cooked pasta, 150g sauce), grilled chicken breast (130g), and side salad with olive oil dressing (30ml).\n    * Protein: 42g, Fat: 18g, Carbs: 110g\n\n* **Pre-Training Snack (3:30 PM):** Rice cakes (60g) with honey (25g) and banana (120g).\n    * Protein: 4g, Fat: 2g, Carbs: 75g\n\n* **Dinner (7:00 PM):** Baked sweet potato (250g), lean ground turkey (130g) with rice (80g cooked), and steamed carrots (150g) with butter (10g).\n    * Protein: 38g, Fat: 18g, Carbs: 120g\n\n* **Evening Snack (9:30 PM):** Whole grain cereal (50g) with low-fat milk (240ml), dried raisins (30g), and granola (25g).\n    * Protein: 10g, Fat: 8g, Carbs: 95g\n\n* **Before Bed (Optional, 10:30 PM):** Greek yogurt (200g) with honey (20g).\n    * Protein: 18g, Fat: 4g, Carbs: 25g\n\n---\n\n**Total Macronutrients:** Protein (142g), Fat (72g), Carbs (620g)\n\nThis plan prioritizes high-quality carbohydrates and lean proteins strategically timed around training sessions to maximize glycogen storage and support endurance performance during marathon preparation.",
+    "test_case": {
+      "prompt_inputs": {
+        "height": "180 cm",
+        "weight": "72 kg",
+        "goal": "Marathon training carbohydrate-loading with high caloric intake (3500+ kcal) aligned to training schedule",
+        "restrictions": "None"
+      },
+      "solution_criteria": [
+        "Meal plan contains exactly 1 day of meals with timing synchronized to training session",
+        "Total daily calories meet or exceed 3500 kcal with carbohydrates comprising 55-65% of total intake",
+        "Plan is presented in compact format (concise descriptions, not lengthy recipes)"
+      ],
+      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+      "scenario": "Testing with a professional endurance athlete (marathon runner) requiring high caloric intake and carbohydrate-loading strategy while accounting for training schedule timing"
+    },
+    "score": 6,
+    "reasoning": "The solution successfully meets all three mandatory requirements with clear daily caloric total, complete macronutrient breakdown, and well-timed meals with exact portions. However, it violates the secondary criterion by exceeding the 55-65% carbohydrate range (actual: 69.5%). Additionally, there's a discrepancy between the stated macronutrient targets and the calculated totals from individual meals, suggesting calculation errors. The plan is appropriately compact and includes strategic meal timing, but the carbohydrate percentage overage and internal inconsistency prevent a higher score."
+  }
+]
