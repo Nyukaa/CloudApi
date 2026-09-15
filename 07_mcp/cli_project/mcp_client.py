@@ -6,6 +6,8 @@ from mcp import ClientSession, StdioServerParameters, types
 from mcp.client.stdio import stdio_client
 
 
+#uv run main.py to run the client and server together.
+#"What is the content of report.pdf?" - to test using the tool.
 class MCPClient:
     def __init__(
         self,
@@ -42,14 +44,17 @@ class MCPClient:
         return self._session
 
     async def list_tools(self) -> list[types.Tool]:
-        # TODO: Return a list of tools defined by the MCP server
-        return []
+        #  Return a list of tools defined by the MCP server
+        # Какие инструменты доступны?
+        result = await self.session().list_tools()
+        return result.tools
 
     async def call_tool(
         self, tool_name: str, tool_input: dict
     ) -> types.CallToolResult | None:
-        # TODO: Call a particular tool and return the result
-        return None
+        # Call a particular tool and return the result
+        # Запусти вот этот инструмент.  
+        return await self.session().call_tool(tool_name, tool_input)
 
     async def list_prompts(self) -> list[types.Prompt]:
         # TODO: Return a list of prompts defined by the MCP server
@@ -75,14 +80,19 @@ class MCPClient:
         await self.cleanup()
 
 
-# For testing
+# For testing, we can create a simple main function that connects to the MCP server and lists the available tools.
+#uv run mcp_client.py 
+# to check if the client can connect to the server and list tools
+# and pass them to Claude. 
 async def main():
+    #Client сам запускает MCP server: А затем подключается к нему.
     async with MCPClient(
         # If using Python without UV, update command to 'python' and remove "run" from args.
         command="uv",
         args=["run", "mcp_server.py"],
     ) as _client:
-        pass
+        result = await _client.list_tools()
+        print("Tools:", result)
 
 
 if __name__ == "__main__":
