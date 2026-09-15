@@ -1,8 +1,9 @@
 from mcp.server.fastmcp import FastMCP
 from pydantic import Field
 mcp = FastMCP("DocumentMCP", log_level="ERROR")
-
-
+# uv run mcp dev mcp_server.py
+#MCP Inspector = Postman - инструмент для MCP server in browser.
+#И самое важное: Claude здесь пока вообще не нужен.
 docs = {
     "deposition.md": "This deposition covers the testimony of Angela Smith, P.E.",
     "report.pdf": "The report details the state of a 20m condenser tower.",
