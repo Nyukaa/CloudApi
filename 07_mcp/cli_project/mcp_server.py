@@ -49,8 +49,33 @@ def edit_document(
         raise ValueError(f"Doc with id {doc_id} not found")
 
     docs[doc_id] = docs[doc_id].replace(old_str, new_str)
-# TODO: Write a resource to return all doc id's
-# TODO: Write a resource to return the contents of a particular doc
+#for test MCP Inspector uv run mcp dev mcp_server.py / resources    
+#  Write a resource to return all doc id's
+#  # Return a list of all document ids
+@mcp.resource(
+     "docs://documents",
+     mime_type="application/json",  #  
+)
+
+def list_docs() -> list[str]:
+    return list(docs.keys())
+#  Write a resource to return the contents of a particular doc
+# it needs for autocompletion of the doc_id in the prompt.
+# Пользователь: @report Клиент gолучает docs://documents 
+# report.pdf report_final.pdf
+# Пользователь выбирает: @report.pdf Клиент получает:
+#docs://documents/report.pdf  содержимое.  
+
+@mcp.resource(
+     "docs://documents/{doc_id}",
+     mime_type="text/plain",
+   
+)
+# Return the contents of a template (particular doc_id) document
+def fetch_doc(doc_id: str) -> str:
+    if doc_id not in docs:
+        raise ValueError(f"Doc with id {doc_id} not found")
+    return docs[doc_id]
 # TODO: Write a prompt to rewrite a doc in markdown format
 # TODO: Write a prompt to summarize a doc
 
